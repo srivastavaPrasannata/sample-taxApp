@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="demo">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<title>Employee Portal</title>
+	<link href="/css/app.css" rel="stylesheet" >
+	<!-- Angular Material requires Angular.js Libraries -->
+    <script src="/webjars/angularjs/1.4.9/angular.js"></script>
+	<script src="/webjars/angularjs/1.4.9/angular-resource.js"></script>
+	<script src="/webjars/angularjs/1.4.9/angular-route.js"></script>
+	<!-- Controller -->
+	<script src="/js/app.js"></script>
+	<!-- <script src="/js/controller.js"></script> -->
+</head>
+	
+<body data-ng-controller="demoController">
+
+<img alt="Employee Portal" src="/img/Employer-Portal-Banner.jpg">
+
+<div class="lg_font">
+	<button type="submit" data-ng-click="getEmployee()">Click</button><br></br>
+	<p>Listing all employees {{employees}}</p>
+</div>
+
+<div class="lg_font">
+	<input type="text" placeholder="Enter employee id here" ng-model="id">
+	<button type="submit" data-ng-click="getEmployeeById()">Click here</button>
+	<p>Listing employee By Id {{employee}}</p>
+	
+</div>
+
+<ng-view></ng-view>
+</body>
+</html>
