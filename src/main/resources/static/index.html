@@ -21,16 +21,21 @@
 
 <img alt="Employee Portal" src="/img/Employer-Portal-Banner.jpg">
 
-<div class="lg_font">
-	<button type="submit" data-ng-click="getEmployee()">Click</button><br></br>
-	<p>Listing all employees {{employees}}</p>
+<div class="font row">
+	<div class="col-md-6">
+		<label>Click Enter button to get all employees</label>
+		<button class="button" type="submit" data-ng-click="getEmployee()">Enter</button>
+		<p>{{employees}}</p>
+	</div>
 </div>
 
-<div class="lg_font">
-	<input type="text" placeholder="Enter employee id here" ng-model="id">
-	<button type="submit" data-ng-click="getEmployeeById()">Click here</button>
-	<p>Listing employee By Id {{employee}}</p>
-	
+<div class="font row">
+	<div class="col-md-6">
+		<label>Enter employee id to get employee details by id</label>
+		<input type="text" placeholder="Enter employee id here" data-ng-model="id">
+		<button class="button" type="submit" data-ng-click="getEmployeeById()">Enter</button>
+		<p>{{employee}}</p>
+	</div>
 </div>
 
 <ng-view></ng-view>
